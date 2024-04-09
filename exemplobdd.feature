@@ -6,7 +6,8 @@
             Quero me autenticar
             Para consultar e escolher um filme
 
-            Contexto: Dado que eu acesse a página de autenticação da RaroFlix
+            Contexto: Acessar página de autenticação 
+            Dado que eu acesse a página de autenticação da RaroFlix
 
             Cenário: Autenticação válida
             Quando eu digitar o usuário "joão@raroacademy.com"
@@ -33,7 +34,8 @@
             Quero me cadastrar
             Para acessar e pesquisar os filmes
 
-            Contexto: Dado que eu acesse a página de cadastro da Raroflix
+            Contexto: Acessar página de cadastro
+            Dado que eu acesse a página de cadastro da Raroflix
 
             Cenário: Cadastro de usuário com e-mail único
             Quando eu digitar o email "joão@raroacademy.com"
@@ -62,7 +64,8 @@
             Quero me acessar a página de configurações
             Para alterar meus dados cadastrais
 
-            Contexto: Dado que eu acesse a página de configurações da RaroFlix
+            Contexto: Acessar página de configurações
+            Dado que eu acesse a página de configurações da RaroFlix
 
             Cenário: Usuário alterando seus próprios dados
             Quando eu corrigir o meu nome
@@ -89,7 +92,8 @@
             Quero consultar os meus dados 
             Para verificar as informações
 
-            Contexto: Dado que eu clique em consulta de dados no portal RaroFlix
+            Contexto: Consulta de dados no portal
+            Dado que eu clique em consulta de dados no portal RaroFlix
 
             Cenário: Usuário consultando seus prórpios dados
             Quando eu clicar em consultar dados 
@@ -115,15 +119,18 @@
             Como Adm do portal RaroFlix
             Quero poder ter autonomia no sistema 
             Para promover usuários a crítico ou Adm
-
+            
+            Cenário: Adm promovendo usuário comum a crítico
             Dado que eu consulte um usuário comum
             Quando eu clicar em promover a crítico
             Então o status deverá ser alterado para usuário crítico
-
+            
+            Cenário: Adm promovendo usuário comum a Adm
             Dado que eu consulte um usuário comum
             Quando eu clicar em promover a Adm
             Então o status deverá ser alterado para Adm
 
+            Cenário: Adm promovendo crítico a Adm
             Dado que eu consulte um usuário crítico
             Quando eu clicar em promover a Adm
             Então o status deverá ser alterado para Adm
@@ -133,12 +140,15 @@
             Quero poder acessar a página de editar perfil 
             Para inativar a minha conta
 
-            Contexto: Dado que eu a página de edição de perfil
-
+            Contexto: Acessar página de edição de perfil
+            Dado que eu acesse a página de edição de perfil
+            
+            Cenário: Inativar conta
             Quando eu clicar inativar conta 
             E informar a minha senha 
             Então a conta deverá ser inativada.
 
+            Cenário: Falha ao inativar conta
             Quando eu clicar inativar conta 
             E informar uma senha incorreta
             Então deverá exibir uma mensagem de alerta:"Senha incorreta"
@@ -148,12 +158,15 @@
             Quero poder acessar a página de editar perfil 
             Para poder excluir contas definitivamente
 
-            Contexto: Dado que eu acesse a página de edição de perfil
+            Contexto: Acessar página de configuração do perfil
+            Dado que eu acesse a página de edição de perfil
 
+            Cenário: Exclusão de conta
             Quando eu clicar excluir conta 
             E informar a minha senha 
             Então a conta deverá ser excluída
 
+            Cenário: Falha ao excluir conta
             Quando eu clicar excluir conta 
             E informar uma senha incorreta
             Então deverá exibir uma mensagem de alerta:"Senha incorreta"
@@ -163,12 +176,15 @@
             Quero poder acessar a página de configurações 
             Para poder excluir contas definitivamente
 
-            Contexto: Dado que eu acesse a página de configurações
+            Contexto: Acessar página de configurações
+            Dado que eu acesse a página de configurações
 
+            Cenário: Excluir minha conta definitivamente
             Quando eu clicar em excluir conta 
             E informar a minha senha 
             Então a conta deverá ser excluida
 
+            Cenário: Excluir conta de outro usuário definitivamente
             Quando eu clicar em excluir conta
             E consultar o usuário a ser excluído
             E informar a minha senha 
@@ -179,11 +195,14 @@
             Quero poder me autenticar  
             Para adicionar review de filmes cadastrados
 
-            Contexto: Dado que eu acesse a página de filmes
+            Contexto: Acessar catálogo
+            Dado que eu acesse a página de filmes
 
+            Cenário:Salvando review no sistema
             Quando eu submeter um review no sistema
             Então o mesmo deverá ficar registrado na página do filme
 
+            Cenário: Adicionando nova review no filme
             Quando eu submeter um segundo review em um filme 
             Então deverá exibir uma mensagem de alerta:"Deseja substituir a avaliação? Sim / Não"
 
@@ -192,12 +211,11 @@
             Quero ter acesso a opção selecionar filme  
             Para poder ver detalhes do filme selecionado
 
+            Cenário: Acessar review e dados do filme deslogado
             Dado que eu acesse a página inicial da RaroFlix
             Quando eu clicar em ver detalhes mesmo deslogado
             Então deverá me retornar a página do filme
-            E as reviews juntamente com os dados dos avaliadores
-
-            
+            E as reviews juntamente com os dados dos avaliadores      
 
 
 
