@@ -6,7 +6,7 @@
             Quero me autenticar
             Para consultar e escolher um filme
 
-            Contexto: Acessar página de autenticação 
+            Contexto: Proceder autenticação no site 
             Dado que eu acesse a página de autenticação da RaroFlix
 
             Cenário: Autenticação válida
@@ -34,7 +34,7 @@
             Quero me cadastrar
             Para acessar e pesquisar os filmes
 
-            Contexto: Acessar página de cadastro
+            Contexto: Cadastrar usuário com email único
             Dado que eu acesse a página de cadastro da Raroflix
 
             Cenário: Cadastro de usuário com e-mail único
@@ -64,7 +64,7 @@
             Quero me acessar a página de configurações
             Para alterar meus dados cadastrais
 
-            Contexto: Acessar página de configurações
+            Contexto: Alterar dados em configurações
             Dado que eu acesse a página de configurações da RaroFlix
 
             Cenário: Usuário alterando seus próprios dados
